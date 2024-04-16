@@ -7,3 +7,5 @@ export type Includes<T extends U, U> = T extends U ? true : false
 export type Excludes<T, U> = [T] extends [U] ? false : true
 
 export type Assignable<T, U extends T> = U extends T ? true : false
+
+export type Extends<T, U> = U extends T ? true : false
