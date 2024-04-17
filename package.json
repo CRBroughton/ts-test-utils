@@ -17,7 +17,14 @@
     "bun"
   ],
   "module": "index.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "bun run build.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "changeset": "npx changeset",
     "changeset:status": "npx changeset status --verbose",
     "changeset:version": "npx changeset version"
@@ -29,6 +36,7 @@
     "@antfu/eslint-config": "^2.14.0",
     "@changesets/cli": "^2.27.1",
     "@types/bun": "latest",
+    "bun-plugin-dts": "^0.2.3",
     "eslint": "^9.0.0"
   }
 }
