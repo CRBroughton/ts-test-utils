@@ -1,7 +1,7 @@
 {
   "name": "@crbroughton/ts-test-utils",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A collection of testing helper types",
   "author": "Craig R Broughton",
   "license": "MIT",
@@ -27,7 +27,8 @@
     "lint:fix": "eslint . --fix",
     "changeset": "npx changeset",
     "changeset:status": "npx changeset status --verbose",
-    "changeset:version": "npx changeset version"
+    "changeset:version": "npx changeset version",
+    "publish": "bun run build && npm publish --access=public"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
