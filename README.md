@@ -1,4 +1,12 @@
-# ts-test
+# ts-test-utils
+
+A collection of helper TypeScript types to test other TypeScript types. This collection so far includes:
+
+- Equals - Check for equality between two types
+- Assignable - Check if one type is assignable to another type
+- Excludes - Check if a type doesn't contain another type
+- Includes - Check if a type includes another type
+- Extends - Check if one type is extending another type
 
 To install dependencies:
 
