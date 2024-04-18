@@ -25,7 +25,7 @@ jobs:
       - name: Run unit tests
         run: bun test
       - name: Run typechecker
-        run: bun run typechecker
+        run: bun run typecheck
       - uses: actions/upload-artifact@v3
         if: always()
         with:
