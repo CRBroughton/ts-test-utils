@@ -7,6 +7,8 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - Excludes - Check if a type doesn't contain another type
 - Includes - Check if a type includes another type
 - Extends - Check if one type is extending another type
+- isArray - Checks if a type is an array
+- isNotArray - Checks if a type is not an array
 
 To install dependencies:
 
