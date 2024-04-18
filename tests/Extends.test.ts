@@ -9,12 +9,9 @@ describe('Extends tests', () => {
     type Result = Expect<Extends<BaseType, ExtensionType>>
     //   ^?
   })
-  it('Failed the includes test when the resulting type does not include the sub-type', () => {
+  it('Failed the extends test when the resulting type does not extend the sub-type', () => {
     // @ts-expect-error - Object / Record failing the equality checker
-    type Result = Expect<Includes<{ id: number, name: string }, { hobby: string }>>
+    type Result = Expect<Extends<{ id: number, name: string }, { hobby: string }>>
     //   ^?
   })
 })
-
-
-
