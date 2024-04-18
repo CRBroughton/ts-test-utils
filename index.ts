@@ -11,3 +11,7 @@ export type Excludes<T, U> = [T] extends [U] ? false : true
 export type Assignable<T, U extends T> = U extends T ? true : false
 
 export type Extends<T, U> = U extends T ? true : false
+
+export type isArray<T> = T extends any[] ? true : false
+
+export type isNonArray<T> = isArray<T> extends true ? false : true
