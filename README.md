@@ -9,6 +9,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - Extends - Check if one type is extending another type
 - isArray - Checks if a type is an array
 - isNotArray - Checks if a type is not an array
+- Length - Check a given types length; Combine this with the 'Equals' type checker
 
 To install dependencies:
 
