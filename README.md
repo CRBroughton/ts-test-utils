@@ -11,6 +11,16 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - isNotArray - Checks if a type is not an array
 - Length - Check a given types length; Combine this with the 'Equals' type checker
 
+#### Installation
+
+To install `ts-test-utils` with Bun, run the following command:
+
+```bash
+bun i @crbroughton/ts-test-utils
+```
+
+#### Development Installation
+
 To install dependencies:
 
 ```bash
