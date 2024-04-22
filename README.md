@@ -10,6 +10,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - isArray - Checks if a type is an array
 - isNotArray - Checks if a type is not an array
 - Length - Check a given types length; Combine this with the 'Equals' type checker
+- Position - Returns a type in the given position of an array; Combine this with the 'Equals' type checker
 
 #### Installation
 
