@@ -2,6 +2,7 @@
 
 A collection of helper TypeScript types to test other TypeScript types. This collection so far includes:
 
+- Expect - The main helper; Use this with the below types
 - Equals - Check for equality between two types
 - Assignable - Check if one type is assignable to another type
 - Excludes - Check if a type doesn't contain another type
@@ -12,7 +13,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - Length - Check a given types length; Combine this with the 'Equals' type checker
 - Position - Returns a type in the given position of an array; Combine this with the 'Equals' type checker
 
-#### Installation
+## Installation
 
 To install `ts-test-utils` with Bun, run the following command:
 
@@ -20,7 +21,25 @@ To install `ts-test-utils` with Bun, run the following command:
 bun i @crbroughton/ts-test-utils
 ```
 
-#### Development Installation
+## Getting Started
+
+You can use these types to test other types:
+
+```typescript
+// This should return true
+type Result = Expect<Equals<{ id: number }, { id: number }>>
+```
+
+For testing types that are expected to not equal each-other, you can
+add the `//@ts-expect-error` comment to tell the TypeScript compiler
+that a `false` return is expected, and that a match is not expected:
+
+```typescript
+// @ts-expect-error - Object / Record failing the equality checker
+type ResultRecord = Expect<Equals<{ id: number }, { id: string }>>
+```
+
+## Development Installation
 
 To install dependencies:
 
