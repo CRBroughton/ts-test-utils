@@ -17,3 +17,8 @@ export type isArray<T> = T extends any[] ? true : false
 export type isNonArray<T> = isArray<T> extends true ? false : true
 
 export type Length<T extends readonly any[]> = T['length']
+
+export type Position<T extends any[], U extends number> =
+    T extends [] ? never :
+      T extends any[]
+        ? T[U] : never
