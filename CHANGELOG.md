@@ -1,5 +1,12 @@
 # @crbroughton/ts-test-utils
 
+## 0.3.0
+
+### Minor Changes
+
+- 6cffcb4: Add the Position type - Returns a type in the given position of an array
+- a1ca1ff: Add the Length type - Check a given types length
+
 ## 0.2.0
 
 ### Minor Changes
