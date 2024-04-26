@@ -1,5 +1,11 @@
 # @crbroughton/ts-test-utils
 
+## 0.4.0
+
+### Minor Changes
+
+- Add the IsNullable and IsNonNullable types - Check if a type is nullable or not
+
 ## 0.3.0
 
 ### Minor Changes

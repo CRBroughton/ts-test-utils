@@ -22,3 +22,7 @@ export type Position<T extends any[], U extends number> =
     T extends [] ? never :
       T extends any[]
         ? T[U] : never
+
+export type IsNullable<T> = null extends T ? true : false
+
+export type IsNonNullable<T> = IsNullable<T> extends true ? false : true
