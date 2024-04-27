@@ -30,3 +30,9 @@ export type IsNonNullable<T> = IsNullable<T> extends true ? false : true
 export type IsUndefined<T> = undefined extends T ? true : false
 
 export type IsNonUndefined<T> = IsUndefined<T> extends true ? false : true
+
+export type IsNullish<T> =
+  IsNullable<T> extends true ?
+    true
+    : IsUndefined<T> extends true ?
+      true : false
