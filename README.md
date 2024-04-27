@@ -14,6 +14,8 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - Position - Returns a type in the given position of an array; Combine this with the 'Equals' type checker
 - IsNullable - Check if a type is nullable
 - IsNonNullable - Check if a type is not nullable
+- IsUndefined - Check if a type is undefined
+- IsNonUndefined - Check if a type is not undefined
 
 ## Installation
 

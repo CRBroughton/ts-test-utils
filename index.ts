@@ -26,3 +26,7 @@ export type Position<T extends any[], U extends number> =
 export type IsNullable<T> = null extends T ? true : false
 
 export type IsNonNullable<T> = IsNullable<T> extends true ? false : true
+
+export type IsUndefined<T> = undefined extends T ? true : false
+
+export type IsNonUndefined<T> = IsUndefined<T> extends true ? false : true
