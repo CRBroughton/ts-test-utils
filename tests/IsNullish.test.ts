@@ -2,8 +2,8 @@
 import { describe, it } from 'bun:test'
 import type { Expect, IsNullish } from '../index'
 
-describe('IsNullable tests', () => {
-  it('Passes the IsNullable test when the type is nullable', () => {
+describe('IsNullish tests', () => {
+  it('Passes the IsNullish test when the type is nullish', () => {
     type ResultNull = Expect<IsNullish<{ id: number } | null>>
     //   ^?
     type ResultUndefined = Expect<IsNullish<{ id: number } | undefined>>
@@ -11,7 +11,7 @@ describe('IsNullable tests', () => {
     type ResultBoth = Expect<IsNullish<{ id: number } | null | undefined>>
     //   ^?
   })
-  it('Failed the IsNullable test when the type is not nullable', () => {
+  it('Failed the IsNullish test when the type is not nullish', () => {
     // @ts-expect-error - Fails the exclusion
     type Result = Expect<IsNullish<{ id: string }>>
     //   ^?

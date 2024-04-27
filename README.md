@@ -17,7 +17,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - IsUndefined - Check if a type is undefined
 - IsNonUndefined - Check if a type is not undefined
 - IsNullish - Check if a type is either undefined or null
-
+- IsNonNullish - Check if a type is neither undefined or null
 ## Installation
 
 To install `ts-test-utils` with Bun, run the following command:
