@@ -1,5 +1,13 @@
 # @crbroughton/ts-test-utils
 
+## 0.5.0
+
+### Minor Changes
+
+- 3e11f02: Add IsNonNullish type - Check if a type is neither undefined or null
+- 02d5394: Add IsUndefined and IsNonUndefined types - Check if a type can be undefined or not
+- b1c6950: Add IsNullish type - Check if a type is either undefined or null
+
 ## 0.4.0
 
 ### Minor Changes
