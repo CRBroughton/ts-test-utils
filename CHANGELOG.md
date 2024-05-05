@@ -1,5 +1,11 @@
 # @crbroughton/ts-test-utils
 
+## 0.6.0
+
+### Minor Changes
+
+- 076e0cb: use full names for generic types for easier readability
+
 ## 0.5.0
 
 ### Minor Changes
