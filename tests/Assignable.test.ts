@@ -6,8 +6,6 @@ describe('Assignable tests', () => {
   it('Passes the assignable test when the first type is assignable', () => {
     type Result = Expect<Assignable<{ id: number | string }, { id: number, name: string }>>
     //   ^?
-    interface FullType { id: number, name: string, location: { city: 'Brighton' } }
-    //   ^?
   })
   it('Failed the assignable test when the first type is not assignable', () => {
     // @ts-expect-error - Fails the exclusion

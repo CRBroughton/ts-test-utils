@@ -1,44 +1,50 @@
-export type Expect<T extends true> = T
+export type Expect<Result extends true> = Result
 
-export type Equals<T, U> = T extends U ? U extends T ? true : false : false
-
-export type NotEquals<X, Y> = true extends Equals<X, Y> ? false : true
-
-export type Includes<T extends U, U> = T extends U ? true : false
-
-export type Excludes<T, U> = [T] extends [U] ? false : true
-
-export type Assignable<T, U extends T> = U extends T ? true : false
-
-export type Extends<T, U> = U extends T ? true : false
-
-export type isArray<T> = T extends any[] ? true : false
-
-export type isNonArray<T> = isArray<T> extends true ? false : true
-
-export type Length<T extends readonly any[]> = T['length']
-
-export type Position<T extends any[], U extends number> =
-    T extends [] ? never :
-      T extends any[]
-        ? T[U] : never
-
-export type IsNullable<T> = null extends T ? true : false
-
-export type IsNonNullable<T> = IsNullable<T> extends true ? false : true
-
-export type IsUndefined<T> = undefined extends T ? true : false
-
-export type IsNonUndefined<T> = IsUndefined<T> extends true ? false : true
-
-export type IsNullish<T> =
-  IsNullable<T> extends true ?
+export type Equals<Actual, Expectation> = Actual extends Expectation ?
+  Expectation extends Actual ?
     true
-    : IsUndefined<T> extends true ?
+    : false
+  : false
+
+export type NotEquals<Actual, Expectation> = true extends Equals<Actual, Expectation> ? false : true
+
+export type Includes<Actual extends Inclusion, Inclusion> = Actual extends Inclusion ? true : false
+
+export type Excludes<Actual, Excluded> = [Actual] extends [Excluded] ? false : true
+
+export type Assignable<Actual, Assigned extends Actual> = Assigned extends Actual ? true : false
+
+export type Extends<Actual, Extension> = Extension extends Actual ? true : false
+
+export type isArray<Actual> = Actual extends any[] ? true : false
+
+export type isNonArray<Actual> = isArray<Actual> extends true ? false : true
+
+export type Length<Actual extends readonly any[]> = Actual['length']
+
+export type Position<Actual extends any[], PositionNumber extends number> =
+    Actual extends [] ?
+      never :
+      Actual extends any[]
+        ? Actual[PositionNumber] :
+        never
+
+export type IsNullable<Actual> = null extends Actual ? true : false
+
+export type IsNonNullable<Actual> = IsNullable<Actual> extends true ? false : true
+
+export type IsUndefined<Actual> = undefined extends Actual ? true : false
+
+export type IsNonUndefined<Actual> = IsUndefined<Actual> extends true ? false : true
+
+export type IsNullish<Actual> =
+  IsNullable<Actual> extends true ?
+    true
+    : IsUndefined<Actual> extends true ?
       true : false
 
-export type IsNonNullish<T> =
-  IsNullable<T> extends true ?
+export type IsNonNullish<Actual> =
+  IsNullable<Actual> extends true ?
     false
-    : IsUndefined<T> extends true ?
+    : IsUndefined<Actual> extends true ?
       false : true
