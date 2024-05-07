@@ -18,6 +18,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - IsNonUndefined - Check if a type is not undefined
 - IsNullish - Check if a type is either undefined or null
 - IsNonNullish - Check if a type is neither undefined or null
+
 ## Installation
 
 To install `ts-test-utils` with Bun, run the following command:
@@ -42,6 +43,19 @@ that a `false` return is expected, and that a match is not expected:
 ```typescript
 // @ts-expect-error - Object / Record failing the equality checker
 type ResultRecord = Expect<Equals<{ id: number }, { id: string }>>
+```
+
+You can combine these types with existing types. As an example,
+here is the 'Equals' type being used to check a functions return type:
+
+```typescript
+function myFunction() {
+    return {
+        id: 1,
+        name: 'Craig',
+    }
+}
+type Result = Expect<Equals<ReturnType<typeof myFunction>, { id: number, name: string }>>
 ```
 
 ## Development Installation
