@@ -16,9 +16,9 @@ export type Assignable<Actual, Assigned extends Actual> = Assigned extends Actua
 
 export type Extends<Actual, Extension> = Extension extends Actual ? true : false
 
-export type isArray<Actual> = Actual extends any[] ? true : false
+export type IsArray<Actual> = Actual extends any[] ? true : false
 
-export type isNonArray<Actual> = isArray<Actual> extends true ? false : true
+export type IsNonArray<Actual> = IsArray<Actual> extends true ? false : true
 
 export type Length<Actual extends readonly any[]> = Actual['length']
 

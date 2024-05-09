@@ -1,7 +1,7 @@
 {
   "name": "@crbroughton/ts-test-utils",
   "type": "module",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A collection of testing helper types",
   "author": "Craig R Broughton",
   "license": "MIT",

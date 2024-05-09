@@ -1,5 +1,11 @@
 # @crbroughton/ts-test-utils
 
+## 0.6.1
+
+### Patch Changes
+
+- Fix IsArray and IsNonArray spelling to match rest of types, add test coverage to IsNonArray
+
 ## 0.6.0
 
 ### Minor Changes
