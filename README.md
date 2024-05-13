@@ -24,7 +24,7 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 To install `ts-test-utils` with Bun, run the following command:
 
 ```bash
-bun i @crbroughton/ts-test-utils
+bun i -D @crbroughton/ts-test-utils
 ```
 
 ## Getting Started
