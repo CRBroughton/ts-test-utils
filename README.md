@@ -8,8 +8,8 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - Excludes - Check if a type doesn't contain another type
 - Includes - Check if a type includes another type
 - Extends - Check if one type is extending another type
-- isArray - Checks if a type is an array
-- isNotArray - Checks if a type is not an array
+- IsArray - Checks if a type is an array
+- IsNotArray - Checks if a type is not an array
 - Length - Check a given types length; Combine this with the 'Equals' type checker
 - Position - Returns a type in the given position of an array; Combine this with the 'Equals' type checker
 - IsNullable - Check if a type is nullable
