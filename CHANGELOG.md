@@ -1,5 +1,11 @@
 # @crbroughton/ts-test-utils
 
+## 0.6.2
+
+### Patch Changes
+
+- 0b06d6e: Simplify unit tests for each of the helper types
+
 ## 0.6.1
 
 ### Patch Changes
