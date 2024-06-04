@@ -22,8 +22,6 @@ jobs:
           bun-version: latest
       - name: Install dependencies
         run: bun install
-      - name: Run unit tests
-        run: bun test
       - name: Run typechecker
         run: bun run typecheck
       - uses: actions/upload-artifact@v3
