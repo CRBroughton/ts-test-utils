@@ -6,6 +6,10 @@ export type Equals<Actual, Expectation> = Actual extends Expectation ?
     : false
   : false
 
+export type IsUnionEqual<T, U> =
+    (<V>() => V extends T ? 1 : 2) extends
+    (<V>() => V extends U ? 1 : 2) ? true : false
+
 export type NotEquals<Actual, Expectation> = true extends Equals<Actual, Expectation> ? false : true
 
 export type Includes<Actual extends Inclusion, Inclusion> = Actual extends Inclusion ? true : false
@@ -48,3 +52,9 @@ export type IsNonNullish<Actual> =
     false
     : IsUndefined<Actual> extends true ?
       false : true
+
+export type IsVoid<Actual> = void extends Actual ? true : false
+
+export type IsNonVoid<Actual> = IsVoid<Actual> extends true ? false : true
+
+export type NonVoid<Actual> = Actual extends void ? never : Actual

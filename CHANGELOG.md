@@ -1,5 +1,15 @@
 # @crbroughton/ts-test-utils
 
+## 0.7.0
+
+### Minor Changes
+
+- add isUnionEqual, isVoid, isNonVoid and NonVoid types
+
+### Patch Changes
+
+- 49bbb51: update dependencies
+
 ## 0.6.2
 
 ### Patch Changes

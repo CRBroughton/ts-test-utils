@@ -18,6 +18,10 @@ A collection of helper TypeScript types to test other TypeScript types. This col
 - IsNonUndefined - Check if a type is not undefined
 - IsNullish - Check if a type is either undefined or null
 - IsNonNullish - Check if a type is neither undefined or null
+- IsVoid - Check if a type is void
+- IsNonVoid - Check if a type is not void
+- NonVoid - Remove void from a union that contains void
+- isUnionEqual - Check for equality between two unions
 
 ## Installation
 
