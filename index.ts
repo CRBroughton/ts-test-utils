@@ -1,14 +1,10 @@
 export type Expect<Result extends true> = Result
 
-export type Equals<Actual, Expectation> = Actual extends Expectation ?
-  Expectation extends Actual ?
-    true
-    : false
-  : false
+export type Equals<Actual, Expectation> =
+  (<V>() => V extends Actual ? 1 : 2) extends
+  (<V>() => V extends Expectation ? 1 : 2) ? true : false
 
-export type IsUnionEqual<T, U> =
-    (<V>() => V extends T ? 1 : 2) extends
-    (<V>() => V extends U ? 1 : 2) ? true : false
+export type IsUnionEqual<Actual, Expectation> = Equals<Actual, Expectation>
 
 export type NotEquals<Actual, Expectation> = true extends Equals<Actual, Expectation> ? false : true
 
