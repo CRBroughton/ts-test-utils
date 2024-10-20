@@ -56,3 +56,5 @@ export type IsVoid<Actual> = void extends Actual ? true : false
 export type IsNonVoid<Actual> = IsVoid<Actual> extends true ? false : true
 
 export type NonVoid<Actual> = Actual extends void ? never : Actual
+
+export type GetParameters<T> = T extends (...args: infer P) => any ? P : never
