@@ -6,7 +6,9 @@ export type Equals<Actual, Expectation> =
 
 export type IsUnionEqual<Actual, Expectation> = Equals<Actual, Expectation>
 
-export type NotEquals<Actual, Expectation> = true extends Equals<Actual, Expectation> ? false : true
+export type NotEquals<Actual, Expectation> =
+  (<V>() => V extends Actual ? 1 : 2) extends
+  (<V>() => V extends Expectation ? 1 : 2) ? false : true
 
 export type Includes<Actual extends Inclusion, Inclusion> = Actual extends Inclusion ? true : false
 
