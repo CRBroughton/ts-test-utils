@@ -58,3 +58,5 @@ export type IsNonVoid<Actual> = IsVoid<Actual> extends true ? false : true
 export type NonVoid<Actual> = Actual extends void ? never : Actual
 
 export type GetParameters<T> = T extends (...args: infer P) => any ? P : never
+
+export type GetArrayUnion<T> = T extends readonly (infer U)[] ? U : never
