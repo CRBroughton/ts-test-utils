@@ -61,6 +61,8 @@ export type GetParameters<T> = T extends (...args: infer P) => any ? P : never
 
 export type GetArrayUnion<T> = T extends readonly (infer U)[] ? U : never
 
+export type TupleElementAt<T extends unknown[], Index extends number> = T[Index]
+
 export type DeepReturnType<T> =
   T extends (...args: unknown[]) => infer ReturnType
     ? ReturnType extends (...args: unknown[]) => unknown
